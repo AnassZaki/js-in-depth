@@ -1,0 +1,22 @@
+$primary: hsl(240, 100%, 50%);
+$secondary: hsl(220, 100%, 50%);
+$hover: hsl(210, 100%, 50%);
+
+.button {
+  background-color: $primary; // Blue
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.button--secondary {
+  @extend .button;
+  background-color: $secondary;
+  &:hover {
+    background-color: $hover;
+  }
+}

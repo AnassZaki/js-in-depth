@@ -3,6 +3,8 @@ const GIPHY_URL = "https://api.giphy.com/v1/gifs/search?q=";
 const GIPHY_PARAMS =
   "&api_key=CZIPrpfiPltwp0isbollFWSJJL5IeVRn&limit=25&offset=0&rating=g&lang=en";
 
+const button = document.getElementById("test");
+
 const setWordInDiv = (word) => {
   const wordSpan = document.getElementById("word");
   wordSpan.innerHTML = word;
@@ -36,7 +38,21 @@ const getWordGif = async () => {
   }
 };
 
-getWordGif().then((results) => {
-  setWordInDiv(results.word);
-  setGifinImg(results.gif);
+button.addEventListener("click", () => {
+  Promise.resolve().then(() => console.log("Microtask 1"));
+  console.log("listener 1");
 });
+
+button.addEventListener("click", () => {
+  getWordGif().then((results) => {
+    setWordInDiv(results.word);
+    setGifinImg(results.gif);
+  });
+});
+
+// button.click();
+
+// getWordGif().then((results) => {
+//   setWordInDiv(results.word);
+//   setGifinImg(results.gif);
+// });

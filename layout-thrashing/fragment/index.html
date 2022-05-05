@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../style.css" />
+    <script defer src="index.js"></script>
+    <title>Document Fragment</title>
+  </head>
+  <body>
+    <h1>Prevent DOM reflows with DocumentFragment</h1>
+    <p>
+      Reflow is the name of the web browser process for re-calculating the
+      positions and geometries of elements in the document, for the purpose of
+      re-rendering part or all of the document.
+    </p>
+    <p>
+      By using DocumentFragment we reduce the amount of browser reflows because
+      we only append one fragment at a time instead of multiple elements each
+      iteration.
+    </p>
+    <section>
+      <button id="slow-draw">Without DOMfragment</button>
+      <button id="fast-draw">With DOMfragment</button>
+    </section>
+    <section class="flex-section" id="fragment"></section>
+  </body>
+</html>

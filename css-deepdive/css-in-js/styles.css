@@ -1,0 +1,62 @@
+/* max-width for Smaller screens */
+/* min-width for Wider screens */
+:root {
+  --purple: hsl(240, 45%, 44%);
+  --blue: hsl(220, 45%, 44%);
+  --blueish: hsl(200, 45%, 44%);
+  --green: hsl(180, 45%, 44%);
+  --greenish: hsl(160, 45%, 44%);
+}
+@media screen and (max-width: 600px) {
+  .flex-item {
+    color: white;
+    background: var(--purple);
+  }
+  .grid-layout > .sidebar {
+    grid-column: 1/4;
+  }
+  .grid-layout > .grid-article {
+    grid-column: 1/4;
+  }
+}
+
+/* Flex Box */
+.flex-box {
+  display: flex;
+  flex-wrap: wrap;
+}
+.flex-item {
+  padding: 2em;
+  margin: 2em;
+  border: 2px solid black;
+  flex: 1;
+}
+
+/* Grid Layout */
+.grid-layout {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  gap: 10px;
+}
+
+header {
+  background-color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1/4;
+}
+.sidebar {
+  background-color: var(--blueish);
+  grid-column: 1/2;
+}
+.grid-article {
+  background-color: var(--green);
+  color: #fff;
+  grid-column: 2/4;
+}
+footer {
+  background-color: var(--greenish);
+  grid-column: 1/4;
+}

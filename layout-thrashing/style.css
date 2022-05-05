@@ -1,0 +1,41 @@
+html {
+  font: 14px Helvetica, sans-serif;
+  background: black;
+  color: white;
+}
+
+* {
+  box-sizing: border-box;
+  margin-bottom: 1rem;
+}
+
+h1,
+p {
+  max-width: 400px;
+}
+
+h1 {
+  font-size: 3em;
+}
+
+div {
+  width: 25%;
+  margin: 0;
+  background: white;
+  border: solid 2px black;
+}
+
+.big-link {
+  color: beige;
+  font-size: 1.3em;
+}
+
+.flex-section {
+  overflow: hidden;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#speed {
+  font-size: 2.4em;
+}

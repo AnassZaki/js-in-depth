@@ -1,0 +1,43 @@
+.button, .button--secondary {
+  background-color: blue;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.5rem;
+}
+
+.button--secondary {
+  background-color: #0055ff;
+}
+.button--secondary:hover {
+  background-color: #0080ff;
+}
+
+.photo-layout {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: #dfff;
+  -ms-transform: rotate(90deg);
+  -webkit-transform: rotate(90deg);
+  transform: rotate(90deg);
+}
+.photo-layout > div {
+  flex: 200px;
+  margin: 1rem;
+}
+
+@supports (display: grid) {
+  .photo-layout {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    grid-gap: 2rem;
+  }
+  .photo-layout > div {
+    margin: 0;
+  }
+}
+
+/*# sourceMappingURL=output.css.map */

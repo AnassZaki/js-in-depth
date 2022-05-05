@@ -2,7 +2,7 @@
   "name": "js-in-depth",
   "version": "1.0.0",
   "description": "JavaScript in Depth",
-  "main": "index.js",
+  "main": "./css-deepdive/app.js",
   "scripts": {
     "start": "http-server",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -11,6 +11,7 @@
   "license": "ISC",
   "type": "module",
   "dependencies": {
-    "http-server": "^13.0.2"
+    "http-server": "^13.0.2",
+    "sass": "^1.43.4"
   }
 }

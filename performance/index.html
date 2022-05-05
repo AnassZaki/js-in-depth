@@ -1,0 +1,30 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script defer src="raf.js"></script>
+    <script defer src="debounce.js"></script>
+    <script defer src="throttle.js"></script>
+    <title>Performance</title>
+    <style>
+      div {
+        background: cornflowerblue;
+        width: 10px;
+        height: 10px;
+      }
+      .raf-box {
+        background: #ffc107c4;
+      }
+      .debounce-box {
+        background: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <button id="start">Start (rAF)</button>
+    <button id="pause">Pause (rAF)</button>
+    <button id="erase">Erase (rAF)</button>
+    <button id="debounce">Debounce</button>
+  </body>
+</html>

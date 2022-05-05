@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="style.css" />
+    <script defer src="thrash.js"></script>
+    <title>Layout Thrashing</title>
+  </head>
+  <body>
+    <h1>Prevent layout thrashing with requestAnimationFrame</h1>
+    <p>
+      In this example we are carrying out the task of setting heights of four
+      divs on the page based on their width.
+      <strong>We've solved the problem in two ways:</strong>
+    </p>
+    <p>
+      <strong>The first</strong> is less performant because it causes the DOM to
+      reflow 4 times by reading and writing in quick succession.
+    </p>
+    <p>
+      <strong>The second</strong> makes use of requestAnimationFrame to schedule
+      all DOM writes for the next frame. This means that all the reads happen
+      together, followed by all the writes, and our layout doesn't get
+      'thrashed' :)
+    </p>
+    <p>
+      Run timeline in DevTools and observe the number of layouts event that
+      occur for each solution.
+    </p>
+    <a href="fragment/index.html" class="big-link">Use DocumentFragment</a>
+    <section>
+      <button id="thrash">With layout thrash</button>
+      <button id="nothrash">Without layout thrash</button>
+      <span id="speed"></span>
+    </section>
+    <section class="flex-section">
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+      <div></div>
+    </section>
+  </body>
+</html>
